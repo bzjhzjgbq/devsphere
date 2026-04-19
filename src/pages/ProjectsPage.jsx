@@ -87,50 +87,46 @@ export default function ProjectsPage() {
   return (
     <PageReveal className="space-y-6">
       <PageContainer>
-        <Reveal as="section" className="surface-strong relative overflow-hidden px-6 py-7 sm:px-8 lg:px-10 lg:py-9">
+        <Reveal
+          as="section"
+          className="surface-strong relative overflow-hidden px-6 py-5 sm:px-8 lg:px-10"
+        >
           <div className="pointer-events-none absolute inset-0">
-            <div className="absolute -right-16 top-0 h-56 w-56 rounded-full bg-emerald-100/70 blur-3xl" />
-            <div className="absolute left-4 top-8 h-40 w-40 rounded-full bg-sky-100/45 blur-3xl" />
+            <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-emerald-100/70 blur-3xl" />
+            <div className="absolute left-10 top-10 h-28 w-28 rounded-full bg-sky-100/35 blur-3xl" />
           </div>
 
-          <div className="relative grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_360px] xl:items-end">
-            <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-emerald-50/90 px-3 py-1.5 text-xs font-medium text-emerald-700 shadow-sm">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                Project Directory
-              </div>
-
-              <h1 className="mt-5 max-w-4xl text-[38px] font-semibold leading-[1.04] tracking-[-0.05em] text-slate-950 sm:text-[46px] lg:text-[54px]">
+          <div className="relative grid gap-5 xl:grid-cols-[minmax(0,1fr)_300px] xl:items-end">
+            <div className="max-w-3xl">
+              <p className="eyebrow">Project Directory</p>
+              <h1 className="mt-2.5 text-[30px] font-semibold leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[34px] lg:text-[38px]">
                 发现值得持续关注的开发者项目
               </h1>
 
-              <p className="mt-5 max-w-2xl text-[15px] leading-8 text-slate-600 sm:text-base">
-                这里是 DarkSec 最核心的内容区。项目标题、作者、时间、技术栈与互动数据被放在更清晰的位置，方便你快速判断价值并继续深入浏览。
+              <p className="mt-3 max-w-[56ch] text-[15px] leading-6 text-slate-600">
+                项目页聚焦浏览效率，让标题、作者、发布时间、技术栈与互动数据在更紧凑的结构里帮助你快速判断价值。
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-3.5 flex flex-wrap gap-2.5">
                 <Link to="/projects/new">
-                  <Button className="px-5 py-3 shadow-sm">发布项目</Button>
+                  <Button size="sm">发布项目</Button>
                 </Link>
                 <Link to="/articles">
-                  <Button variant="secondary" className="px-5 py-3 shadow-sm">
+                  <Button variant="secondary" size="sm">
                     查看技术文章
                   </Button>
                 </Link>
               </div>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+            <div className="grid gap-2.5 sm:grid-cols-3 xl:grid-cols-1">
               {summary.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-2xl border border-slate-200 bg-white/85 px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.05)] backdrop-blur-sm"
-                >
-                  <p className="text-[28px] font-semibold tracking-[-0.05em] text-slate-950">
+                <div key={item.label} className="surface-soft px-4 py-3">
+                  <p className="text-[20px] font-semibold tracking-[-0.04em] text-slate-950">
                     {item.value}
                   </p>
                   <p className="mt-1 text-sm font-medium text-slate-700">{item.label}</p>
-                  <p className="mt-2 text-xs leading-5 text-slate-500">{item.note}</p>
+                  <p className="mt-1 text-xs leading-5 text-slate-500">{item.note}</p>
                 </div>
               ))}
             </div>
@@ -173,7 +169,7 @@ export default function ProjectsPage() {
         </Reveal>
 
         <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_320px]">
-          <Reveal className="space-y-4">
+          <Reveal className="space-y-4" immediate delay={0.06}>
             {filteredProjects.length ? (
               filteredProjects.map((project) => <ProjectListCard key={project.id} project={project} />)
             ) : (
@@ -185,7 +181,7 @@ export default function ProjectsPage() {
             )}
           </Reveal>
 
-          <Reveal className="space-y-4 xl:sticky xl:top-24 xl:self-start" delay={0.08}>
+          <Reveal className="space-y-4 xl:sticky xl:top-24 xl:self-start" immediate delay={0.1}>
             <ProjectSidebarList
               projects={featuredProjects}
               tags={popularTags}

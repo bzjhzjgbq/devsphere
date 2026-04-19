@@ -36,7 +36,7 @@ export default function UserCenterPage() {
               <SectionHeader
                 eyebrow="My Articles"
                 title="我的文章"
-                description="展示这位开发者在社区中的持续输出与内容表达。"
+                description="这里汇集这位开发者在社区中的持续输出与内容沉淀。"
               />
               <UserArticleList articles={myArticles} />
             </Reveal>
@@ -45,7 +45,7 @@ export default function UserCenterPage() {
               <SectionHeader
                 eyebrow="My Projects"
                 title="我的项目"
-                description="项目是个人主页里最能体现方向与能力的内容。"
+                description="项目是个人主页里最能体现方向、能力与长期投入的内容。"
               />
               <UserProjectList projects={myProjects} title="已发布项目" />
             </Reveal>

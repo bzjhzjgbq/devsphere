@@ -8,7 +8,7 @@ const navItems = [
   { to: "/", label: "首页" },
   { to: "/projects", label: "项目" },
   { to: "/articles", label: "文章" },
-  { to: "/user", label: "用户中心" },
+  { to: "/user", label: "个人主页" },
 ];
 
 const navItemClass =

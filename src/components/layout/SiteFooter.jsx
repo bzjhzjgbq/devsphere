@@ -7,8 +7,8 @@ const footerColumns = [
     links: [
       { label: "首页", to: "/" },
       { label: "项目社区", to: "/projects" },
-      { label: "文章模块", to: "/articles" },
-      { label: "用户中心", to: "/user" },
+      { label: "文章中心", to: "/articles" },
+      { label: "个人主页", to: "/user" },
     ],
   },
   {
@@ -58,18 +58,18 @@ export default function SiteFooter() {
               </div>
 
               <h3 className="mt-6 text-[26px] font-semibold tracking-[-0.04em] text-slate-950 sm:text-[30px]">
-                为项目、文章与开发者关系而设计的社区首页。
+                为项目、文章与开发者关系而设计的社区平台。
               </h3>
 
               <p className="mt-4 max-w-xl text-[15px] leading-7 text-slate-600">
-                DarkSec 关注的不只是内容展示，更是开发者如何通过项目、文章与社区互动持续建立长期价值。
+                DarkSec 关注的不只是内容展示，更关注开发者如何通过项目、文章与社区互动持续建立长期价值。
               </p>
 
               <div className="mt-6 flex flex-wrap gap-2 text-sm text-slate-500">
-                <span className="tag-chip">Projects</span>
-                <span className="tag-chip">Articles</span>
-                <span className="tag-chip">People</span>
-                <span className="tag-chip">Community</span>
+                <span className="tag-chip">项目</span>
+                <span className="tag-chip">文章</span>
+                <span className="tag-chip">开发者</span>
+                <span className="tag-chip">社区</span>
               </div>
             </div>
 

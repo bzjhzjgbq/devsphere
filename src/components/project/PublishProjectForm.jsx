@@ -45,7 +45,7 @@ export default function PublishProjectForm() {
           <p className="eyebrow">Publish Project</p>
           <h1 className="mt-3 headline-lg">发布你的项目</h1>
           <p className="mt-3 body-md">
-            当前为前端静态演示版本。你可以像在社区里发帖一样整理项目信息，提交后会展示成功反馈，但不会写入后端。
+            当前为前端静态演示版本。你可以像在社区里发帖一样整理项目内容，提交后会展示成功反馈，但不会写入后端。
           </p>
         </div>
 
@@ -53,7 +53,13 @@ export default function PublishProjectForm() {
           <div className="grid gap-5 md:grid-cols-2">
             <label className="space-y-2">
               <FieldLabel title="项目名称" hint="用清晰名称说明你的项目是什么" />
-              <input name="name" value={form.name} onChange={handleChange} className="field" placeholder="例如：DevBoard" />
+              <input
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                className="field"
+                placeholder="例如：DarkBoard"
+              />
             </label>
 
             <label className="space-y-2">
@@ -112,7 +118,7 @@ export default function PublishProjectForm() {
               onChange={handleChange}
               rows="7"
               className="field"
-              placeholder="描述项目背景、功能、适用场景等"
+              placeholder="描述项目背景、功能亮点和适用场景"
             />
           </label>
 
@@ -131,17 +137,29 @@ export default function PublishProjectForm() {
           <div className="grid gap-5 md:grid-cols-2">
             <label className="space-y-2">
               <FieldLabel title="GitHub 链接" />
-              <input name="github" value={form.github} onChange={handleChange} className="field" placeholder="https://github.com/your-project" />
+              <input
+                name="github"
+                value={form.github}
+                onChange={handleChange}
+                className="field"
+                placeholder="https://github.com/your-project"
+              />
             </label>
 
             <label className="space-y-2">
               <FieldLabel title="Demo 链接" />
-              <input name="demo" value={form.demo} onChange={handleChange} className="field" placeholder="https://your-demo.com" />
+              <input
+                name="demo"
+                value={form.demo}
+                onChange={handleChange}
+                className="field"
+                placeholder="https://your-demo.com"
+              />
             </label>
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-5">
-            <p className="text-xs text-slate-500">静态演示提交，不会真实保存到服务端。</p>
+            <p className="text-xs text-slate-500">当前为静态演示提交流程，不会真实保存到服务端。</p>
             <Button type="submit">提交项目</Button>
           </div>
         </form>
@@ -158,8 +176,8 @@ export default function PublishProjectForm() {
           <h2 className="text-lg font-semibold tracking-[-0.02em] text-slate-950">发布建议</h2>
           <div className="mt-4 space-y-3 body-sm">
             <p>标题尽量直接，方便其他开发者快速判断项目方向。</p>
-            <p>简介优先写清楚解决什么问题，而不是只写技术名词。</p>
-            <p>亮点建议拆成多条，方便详情页和列表页进行重点展示。</p>
+            <p>简介优先写清解决什么问题，而不是只堆砌技术名词。</p>
+            <p>亮点建议拆成多条，便于详情页和列表页做重点展示。</p>
           </div>
         </Card>
 
@@ -168,7 +186,7 @@ export default function PublishProjectForm() {
           <div className="mt-4 space-y-3 body-sm">
             <p>1. 填写项目信息</p>
             <p>2. 提交前端静态表单</p>
-            <p>3. 演示成功反馈</p>
+            <p>3. 展示成功反馈</p>
           </div>
         </Card>
       </div>

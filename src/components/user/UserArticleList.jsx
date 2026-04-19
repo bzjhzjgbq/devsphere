@@ -7,7 +7,7 @@ export default function UserArticleList({ articles }) {
       <EmptyState
         eyebrow="Articles"
         title="还没有发布文章"
-        description="当前用户的文章列表会在这里展示，包括技术沉淀、实践总结和社区思考。"
+        description="当前用户的文章列表会在这里展示，包含技术沉淀、实践总结和社区思考。"
       />
     );
   }

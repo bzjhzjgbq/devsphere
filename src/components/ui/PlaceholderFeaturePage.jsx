@@ -32,8 +32,8 @@ export default function PlaceholderFeaturePage({
         ) : (
           <EmptyState
             eyebrow="Preview"
-            title="模块骨架已经就位"
-            description="当前页面保留为高质量占位版，后续可以在不打断整体风格的前提下继续补充真实内容。"
+            title="页面骨架已经就位"
+            description="当前页面保留为高质量占位版本，后续可以在不打断整体风格的前提下继续补充真实内容。"
           />
         )}
       </div>

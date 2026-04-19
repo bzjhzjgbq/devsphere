@@ -26,7 +26,7 @@ export default function FeaturedProjectGrid({ projects }) {
               <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
                 <Badge>{project.category}</Badge>
                 <span>{project.publishedAt}</span>
-                <span>•</span>
+                <span>·</span>
                 <span>{project.status}</span>
               </div>
               <h3 className="mt-4 text-[28px] font-semibold tracking-[-0.04em] text-slate-950 transition duration-200 group-hover:text-slate-700">
@@ -42,13 +42,13 @@ export default function FeaturedProjectGrid({ projects }) {
                   />
                   <div>
                     <p className="font-medium text-slate-700">{project.author.name}</p>
-                    <p className="text-xs text-slate-500">Project Author</p>
+                    <p className="text-xs text-slate-500">项目作者</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <span>赞 {project.likes}</span>
                   <span>藏 {project.favorites}</span>
-                  <span>看 {project.views}</span>
+                  <span>阅 {project.views}</span>
                 </div>
               </div>
             </div>

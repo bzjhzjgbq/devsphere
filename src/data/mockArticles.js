@@ -17,7 +17,7 @@ export const articles = [
     id: "article-2",
     title: "独立开发者如何构建公开项目页，吸引第一批核心用户",
     excerpt:
-      "项目首页不只是展示窗口，更是说服用户理解问题、理解作者和理解产品方向的关键节点。",
+      "项目首页不只是展示窗口，更是帮助用户理解问题、理解作者和理解产品方向的关键节点。",
     author: "Lin Yue",
     role: "Full-stack Developer",
     readTime: "6 分钟",
@@ -45,7 +45,7 @@ export const articles = [
     id: "article-4",
     title: "项目页的可信度来自哪里：作者、更新时间还是数据反馈",
     excerpt:
-      "对于开发者社区，信息可信度比强装饰更重要。用户会从作者身份、更新时间和互动线索判断内容价值。",
+      "对于开发者社区，信息可信度比装饰性更重要。用户会从作者身份、更新时间和互动线索判断内容价值。",
     author: "Echo Xu",
     role: "Product Engineer",
     readTime: "5 分钟",
@@ -73,7 +73,7 @@ export const articles = [
     id: "article-6",
     title: "从用户中心到社区身份页：开发者主页应该承载哪些信息",
     excerpt:
-      "个人主页不是简历页，而是社区内身份、作品与持续输出能力的可视化窗口。",
+      "个人主页不是简历页，而是社区内身份、项目与持续输出能力的可视化窗口。",
     author: "Lin Yue",
     role: "Full-stack Developer",
     readTime: "9 分钟",

@@ -128,7 +128,7 @@ export default function ProjectDetailContent({ project }) {
             <div className="rounded-xl border border-slate-200 bg-white p-4">
               <textarea
                 rows="4"
-                placeholder="写下你对这个项目的看法（静态演示）"
+                placeholder="写下你对这个项目的看法（当前为静态演示）"
                 className="field resize-none"
               />
               <div className="mt-3 flex justify-end">

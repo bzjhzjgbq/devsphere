@@ -23,7 +23,7 @@ export default function LoginPage() {
           </Card>
 
           <p className="mt-4 text-center text-sm text-slate-500">
-            登录后即可继续访问项目、文章与社区内容。
+            登录后即可继续浏览项目、文章与社区内容。
           </p>
         </Reveal>
       </PageContainer>

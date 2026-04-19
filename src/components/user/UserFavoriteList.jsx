@@ -7,7 +7,7 @@ export default function UserFavoriteList({ articles, projects }) {
       <EmptyState
         eyebrow="Collections"
         title="还没有收藏记录"
-        description="文章收藏和项目收藏会统一呈现在这里，方便回看感兴趣的内容。"
+        description="这里会统一展示文章收藏与项目收藏，方便回看感兴趣的内容。"
       />
     );
   }

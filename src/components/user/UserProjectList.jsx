@@ -7,7 +7,7 @@ export default function UserProjectList({ projects, title = "我的项目" }) {
       <EmptyState
         eyebrow="Projects"
         title="还没有公开项目"
-        description="项目会在这里展示，包含当前用户发布的作品、状态、分类与简要介绍。"
+        description="这里会展示当前开发者已发布的项目，包括状态、分类与简要介绍。"
       />
     );
   }

@@ -46,7 +46,7 @@ export default function HeroPanel({ stats, pulseCards }) {
             transition={{ duration: 0.5, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
             className="mt-5 max-w-2xl text-[16px] leading-8 text-slate-600 sm:text-[17px]"
           >
-            DarkSec 让项目展示、技术沉淀与创作者表达发生在同一个清晰、可信、易于持续浏览的产品环境里。
+            DarkSec 让项目展示、技术沉淀与开发者表达发生在同一个清晰、可信、适合持续浏览的产品环境里。
           </motion.p>
 
           <motion.div
@@ -98,7 +98,7 @@ export default function HeroPanel({ stats, pulseCards }) {
                 <p className="mt-2 text-sm text-slate-400">社区内容热度概览</p>
               </div>
               <div className="rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-xs text-slate-200">
-                Real-time
+                实时
               </div>
             </div>
 
@@ -125,17 +125,17 @@ export default function HeroPanel({ stats, pulseCards }) {
             <Card className="p-5">
               <p className="eyebrow">Why DarkSec</p>
               <p className="mt-3 text-lg font-semibold tracking-[-0.03em] text-slate-950">
-                像产品一样组织内容，像社区一样连接人与作品。
+                像产品一样组织内容，像社区一样连接开发者与项目。
               </p>
               <p className="mt-3 text-sm leading-7 text-slate-600">
-                让每一条项目更新、每一篇文章和每一位作者都更容易被发现。
+                让每一次项目更新、每一篇文章和每一位开发者都更容易被发现。
               </p>
             </Card>
 
             <Card className="p-5">
-              <p className="text-sm text-slate-500">本周高关注标签</p>
+              <p className="text-sm text-slate-500">本周热门标签</p>
               <div className="mt-3 flex flex-wrap gap-2">
-                {["AI Tools", "Design Systems", "Open Source UI", "Collab Tools"].map((tag) => (
+                {["AI 工具", "设计系统", "开源组件", "协作工具"].map((tag) => (
                   <Badge key={tag}>{tag}</Badge>
                 ))}
               </div>

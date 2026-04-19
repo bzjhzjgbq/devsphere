@@ -26,10 +26,10 @@ export default function ArticleHero({ categories }) {
             transition={{ duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="mt-3 headline-lg"
           >
-            沉浸技术实践、产品思考与社区经验
+            沉浸式阅读技术实践、产品思考与社区经验
           </motion.h1>
           <p className="mt-4 body-md">
-            文章页强调阅读效率和编辑感，让标题、摘要、作者、标签和热度信息更清晰地支持内容浏览。
+            文章页强调阅读效率和信息组织，让标题、摘要、作者、标签与热度信息更清晰地服务内容浏览。
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {categories.slice(0, 4).map((item) => (

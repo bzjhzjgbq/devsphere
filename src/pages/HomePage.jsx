@@ -11,28 +11,28 @@ import SectionHeader from "../components/ui/SectionHeader";
 import { featuredProjects } from "../data/mockProjects";
 
 const homeStats = [
-  { label: "Community Projects", value: "1,280+", detail: "Fresh work shared every week" },
-  { label: "Active Builders", value: "8,600+", detail: "Frontend, backend, AI and product" },
-  { label: "This Week", value: "126", detail: "New projects and deep-dive discussions" },
+  { label: "社区项目", value: "1,280+", detail: "每周持续更新真实项目" },
+  { label: "活跃开发者", value: "8,600+", detail: "覆盖前端、后端、AI 与产品方向" },
+  { label: "本周新增", value: "126", detail: "新项目与深度讨论持续出现" },
 ];
 
 const pulseCards = [
   {
-    title: "Today Trending",
-    value: "AI Workflows",
-    meta: "Discussion heat +24%",
+    title: "今日趋势",
+    value: "AI 工作流",
+    meta: "讨论热度 +24%",
     tone: "from-slate-900 via-slate-800 to-slate-700",
   },
   {
-    title: "New Launches",
+    title: "最新发布",
     value: "18",
-    meta: "Past 24 hours",
+    meta: "过去 24 小时",
     tone: "from-blue-600 via-sky-500 to-cyan-400",
   },
   {
-    title: "Fresh Threads",
+    title: "新增话题",
     value: "342",
-    meta: "Projects, open source and engineering practice",
+    meta: "围绕项目、开源与工程实践",
     tone: "from-emerald-600 via-teal-500 to-cyan-400",
   },
 ];
@@ -40,35 +40,35 @@ const pulseCards = [
 const homeArticles = [
   {
     id: "home-article-1",
-    title: "How design systems stay maintainable as a community platform grows",
+    title: "设计系统如何在开发者社区增长过程中保持可维护",
     excerpt:
-      "A practical look at the visual and interaction layers that become fragile first, plus a rollout path teams can actually sustain.",
+      "从视觉和交互层最容易失控的部分切入，给出一条团队真正能持续执行的演进路径。",
     author: "Aster Chen",
     role: "Frontend Engineer",
-    readTime: "8 min",
-    tag: "Design System",
+    readTime: "8 分钟",
+    tag: "设计系统",
     publishedAt: "2026-04-12",
   },
   {
     id: "home-article-2",
-    title: "How indie developers can shape a public project page that attracts early users",
+    title: "独立开发者如何打造能吸引早期用户的公开项目页",
     excerpt:
-      "A project page is more than a showcase. It helps people understand the problem, the builder and the direction of the product.",
+      "项目页不只是展示窗口，更是帮助用户理解问题、理解作者和理解产品方向的关键界面。",
     author: "Lin Yue",
     role: "Full-stack Developer",
-    readTime: "6 min",
-    tag: "Project Growth",
+    readTime: "6 分钟",
+    tag: "项目增长",
     publishedAt: "2026-04-10",
   },
   {
     id: "home-article-3",
-    title: "Why information hierarchy matters more than visual flair in a dev community",
+    title: "为什么在开发者社区里，信息层级比视觉炫技更重要",
     excerpt:
-      "Patterns pulled from GitHub, Linear and Notion that explain why calm structure wins over noisy presentation on content platforms.",
+      "从 GitHub、Linear 和 Notion 的表达方式里提取规律，理解内容平台为什么更需要克制与秩序。",
     author: "Serein",
     role: "AI Product Builder",
-    readTime: "10 min",
-    tag: "Content Design",
+    readTime: "10 分钟",
+    tag: "内容设计",
     publishedAt: "2026-04-08",
   },
 ];
@@ -78,31 +78,31 @@ const activeUsers = [
     id: "lin-yue",
     name: "Lin Yue",
     role: "Full-stack Developer",
-    summary: "Shares practical work on collaborative tools and AI product design.",
+    summary: "持续分享协作工具与 AI 产品设计的实践经验。",
     avatar:
       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80",
     score: "98",
-    tags: ["AI Product", "Collaboration", "Full-stack"],
+    tags: ["AI 产品", "协作工具", "全栈"],
   },
   {
     id: "aster-chen",
     name: "Aster Chen",
     role: "Frontend Engineer",
-    summary: "Focused on component systems, interface quality and design engineering.",
+    summary: "长期关注组件系统、界面质量与设计工程化。",
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
     score: "94",
-    tags: ["Component Systems", "Design System", "Frontend"],
+    tags: ["组件系统", "设计系统", "前端工程"],
   },
   {
     id: "serein",
     name: "Serein",
     role: "AI Product Builder",
-    summary: "Explores generative applications and multi-modal workflow prototypes.",
+    summary: "探索生成式应用与多模态工作流原型。",
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
     score: "91",
-    tags: ["AI Workflow", "Multimodal", "Prototype"],
+    tags: ["AI 工作流", "多模态", "产品原型"],
   },
 ];
 
@@ -118,7 +118,7 @@ export default function HomePage() {
           <SectionHeader
             eyebrow="Trending Projects"
             title="热门项目"
-            description="Put the most worthwhile projects right after the hero so content discovery and community heat connect naturally."
+            description="把最值得浏览的项目放在首页核心位置，让内容发现和社区热度自然连接起来。"
             action={
               <Link to="/projects">
                 <Button variant="secondary">查看全部项目</Button>
@@ -132,11 +132,11 @@ export default function HomePage() {
           <Reveal className="space-y-6">
             <SectionHeader
               eyebrow="Featured Articles"
-              title="热门文章"
-              description="The homepage should also carry deeper reading, not just project showcase cards, so the platform feels like a real community."
+              title="精选文章"
+              description="首页不只展示项目，也承载更深入的阅读内容，让平台更像真实运转中的开发者社区。"
               action={
                 <Link to="/articles">
-                  <Button variant="secondary">前往文章模块</Button>
+                  <Button variant="secondary">进入文章中心</Button>
                 </Link>
               }
             />
@@ -145,9 +145,9 @@ export default function HomePage() {
 
           <Reveal className="space-y-6" delay={0.08}>
             <SectionHeader
-              eyebrow="Active Users"
-              title="活跃用户"
-              description="Bringing creators onto the homepage makes the platform feel human and lived-in instead of looking like a static content shelf."
+              eyebrow="Active Developers"
+              title="活跃开发者"
+              description="把持续输出的开发者放到首页，能让平台更有温度，也更像真实发生交流的社区。"
             />
             <ActiveUserList users={activeUsers} />
           </Reveal>

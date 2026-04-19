@@ -57,7 +57,7 @@ export default function ArticlesPage() {
             <SectionHeader
               eyebrow="Articles"
               title="文章列表"
-              description={`当前共展示 ${filteredArticles.length} 篇文章，优先强调标题、摘要、作者与阅读反馈。`}
+              description={`当前共展示 ${filteredArticles.length} 篇文章，聚焦标题、摘要、作者与阅读反馈。`}
             />
             {filteredArticles.length ? (
               filteredArticles.map((article) => <ArticleListCard key={article.id} article={article} />)
@@ -65,7 +65,7 @@ export default function ArticlesPage() {
               <EmptyState
                 eyebrow="No Results"
                 title="没有找到匹配的文章"
-                description="可以尝试调整搜索词或切换分类，页面会继续保留当前的推荐与标签浏览。"
+                description="可以尝试调整搜索词或切换分类，页面仍会保留推荐内容与标签浏览。"
               />
             )}
           </Reveal>

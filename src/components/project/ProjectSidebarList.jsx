@@ -59,7 +59,7 @@ export default function ProjectSidebarList({ projects, tags, authors }) {
         </div>
       </SidebarSection>
 
-      <SidebarSection title="活跃作者" eyebrow="Authors">
+      <SidebarSection title="活跃开发者" eyebrow="Developers">
         <div className="space-y-3">
           {authors.map((author) => (
             <div

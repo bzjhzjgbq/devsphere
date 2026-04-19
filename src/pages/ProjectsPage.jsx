@@ -76,9 +76,9 @@ export default function ProjectsPage() {
   }, [search, category, status, sortBy]);
 
   const summary = [
-    { label: "社区项目", value: `${projects.length}+`, note: "持续收录真实开发作品" },
-    { label: "本周热门", value: `${featuredProjects.length}`, note: "首页高热推荐项目" },
-    { label: "筛选维度", value: `${projectCategories.length - 1}`, note: "分类、状态与排序组合浏览" },
+    { label: "社区项目", value: `${projects.length}+`, note: "持续收录真实开发项目" },
+    { label: "本周热门", value: `${featuredProjects.length}`, note: "首页重点推荐项目" },
+    { label: "筛选维度", value: `${projectCategories.length - 1}`, note: "支持分类、状态与排序浏览" },
   ];
 
   const popularTags = useMemo(() => buildPopularTags(projects), []);
@@ -101,11 +101,11 @@ export default function ProjectsPage() {
               </div>
 
               <h1 className="mt-5 max-w-4xl text-[38px] font-semibold leading-[1.04] tracking-[-0.05em] text-slate-950 sm:text-[46px] lg:text-[54px]">
-                发现值得深入了解的开发者项目
+                发现值得持续关注的开发者项目
               </h1>
 
               <p className="mt-5 max-w-2xl text-[15px] leading-8 text-slate-600 sm:text-base">
-                这里是 DarkSec 当前最核心的内容板块。我们把项目标题、作者、发布时间、技术栈和互动数据放在更清晰的位置，让浏览体验更像成熟社区产品，而不是简单的卡片堆叠。
+                这里是 DarkSec 最核心的内容区。项目标题、作者、时间、技术栈与互动数据被放在更清晰的位置，方便你快速判断价值并继续深入浏览。
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -161,14 +161,14 @@ export default function ProjectsPage() {
               项目列表
             </h2>
             <p className="mt-1 text-sm leading-6 text-slate-500">
-              共筛选到 {filteredProjects.length} 个项目，默认按热度优先排序。
+              当前筛选到 {filteredProjects.length} 个项目，默认按热度排序。
             </p>
           </div>
 
           <div className="flex flex-wrap gap-2">
             <Badge>内容优先布局</Badge>
             <Badge>支持搜索 / 分类 / 状态 / 排序</Badge>
-            <Badge>响应式社区页面</Badge>
+            <Badge>响应式社区界面</Badge>
           </div>
         </Reveal>
 
@@ -180,7 +180,7 @@ export default function ProjectsPage() {
               <EmptyState
                 eyebrow="No Results"
                 title="当前筛选条件下没有项目"
-                description="试试清空关键词、切换分类或状态，热门推荐和标签仍然可以帮助你继续浏览。"
+                description="试试调整关键词、分类或状态，侧边推荐与标签仍然可以帮助你继续发现内容。"
               />
             )}
           </Reveal>

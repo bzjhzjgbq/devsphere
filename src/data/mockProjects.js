@@ -65,13 +65,13 @@ export const projects = [
     status: "维护中",
     cover:
       "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=80",
-    summary: "为技术社区产品打造的组件库，提供高一致性的面板、数据卡片与表单组件。",
+    summary: "为技术社区产品打造的组件库，提供高度一致的面板、数据卡片与表单组件。",
     content:
       "Signal UI 聚焦技术社区、SaaS 平台和后台系统，提供大量高复用的组件，并内建设计令牌、动效规范和常见布局模板。",
     techStack: ["React", "Tailwind CSS", "Storybook"],
     highlights: [
       "面向数据密集型界面的视觉优化",
-      "内置社区场景常见模块模板",
+      "内置社区场景常见组件模板",
       "支持组件文档和设计令牌同步",
     ],
     screenshots: [
@@ -188,7 +188,7 @@ export const projects = [
     highlights: [
       "轻量订阅和通知系统",
       "适配移动端浏览和收藏操作",
-      "支持项目状态跟踪",
+      "支持项目状态追踪",
     ],
     screenshots: [
       "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80",

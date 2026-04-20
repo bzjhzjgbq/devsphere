@@ -3,10 +3,37 @@
 @tailwind utilities;
 
 :root {
-  color: #111827;
+  --page-text: #111827;
+  --selection-bg: rgba(16, 185, 129, 0.14);
+  --selection-text: #0f172a;
+  color: var(--page-text);
   background:
     radial-gradient(circle at top, rgba(236, 253, 245, 0.7), transparent 34%),
     linear-gradient(180deg, #f8fafc 0%, #f4f7fb 50%, #eef2f7 100%);
+}
+
+:root[data-accent="mist"] {
+  background:
+    radial-gradient(circle at top, rgba(236, 253, 245, 0.72), transparent 34%),
+    linear-gradient(180deg, #f8fafc 0%, #f4f7fb 50%, #eef2f7 100%);
+}
+
+:root[data-accent="navy"] {
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 34%),
+    linear-gradient(180deg, #0f172a 0%, #111827 55%, #172554 100%);
+}
+
+:root[data-accent="sunset"] {
+  background:
+    radial-gradient(circle at top, rgba(251, 146, 60, 0.18), transparent 34%),
+    linear-gradient(180deg, #fff7ed 0%, #fffaf4 50%, #fef2f2 100%);
+}
+
+:root[data-theme="dark"] {
+  --page-text: #e5e7eb;
+  --selection-bg: rgba(59, 130, 246, 0.24);
+  --selection-text: #f8fafc;
 }
 
 html,
@@ -25,17 +52,16 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  color: #111827;
-  background:
-    radial-gradient(circle at top, rgba(236, 253, 245, 0.7), transparent 34%),
-    linear-gradient(180deg, #f8fafc 0%, #f4f7fb 50%, #eef2f7 100%);
+  color: var(--page-text);
+  background: inherit;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background 0.35s ease, color 0.25s ease;
 }
 
 ::selection {
-  background: rgba(16, 185, 129, 0.14);
-  color: #0f172a;
+  background: var(--selection-bg);
+  color: var(--selection-text);
 }
 
 a {
@@ -58,9 +84,28 @@ textarea {
   font: inherit;
 }
 
+:root[data-theme="dark"] .surface,
+:root[data-theme="dark"] .surface-strong,
+:root[data-theme="dark"] .control-shell {
+  @apply border-slate-800/90 bg-slate-900/90 text-slate-100 shadow-[0_1px_2px_rgba(2,6,23,0.4),0_24px_64px_rgba(2,6,23,0.38)];
+}
+
+:root[data-theme="dark"] .surface-soft {
+  @apply border-slate-800/90 bg-slate-900/70 text-slate-100;
+}
+
+:root[data-theme="dark"] .tag-chip,
+:root[data-theme="dark"] .stat-pill {
+  @apply border-slate-700 bg-slate-800 text-slate-200 hover:border-slate-600 hover:bg-slate-700 hover:text-white;
+}
+
+:root[data-theme="dark"] .field {
+  @apply border-slate-700 bg-slate-900 text-slate-100 placeholder:text-slate-500 hover:border-slate-600 focus:border-sky-400 focus:shadow-[0_0_0_4px_rgba(59,130,246,0.16)];
+}
+
 @layer components {
   .page-shell {
-    @apply mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8;
+    @apply w-full px-4 sm:px-6 lg:px-8;
   }
 
   .surface {
@@ -85,14 +130,6 @@ textarea {
 
   .button-animated {
     transition-property: transform, box-shadow, border-color, background-position, background-color, color;
-  }
-
-  .card-media {
-    @apply transition-transform duration-500 ease-out will-change-transform;
-  }
-
-  .group:hover .card-media {
-    transform: scale(1.035);
   }
 
   .control-shell {

@@ -28,7 +28,7 @@ export default function ArticleFilterBar({
                   key={category}
                   type="button"
                   onClick={() => onCategoryChange(category)}
-                  className={`rounded-full px-3 py-2 text-sm font-medium transition duration-200 focus-visible:shadow-[0_0_0_4px_rgba(148,163,184,0.12)] ${
+                  className={`rounded-full px-3 py-2 text-sm font-medium transition duration-200 ${
                     selected
                       ? "bg-slate-950 text-white shadow-[0_1px_2px_rgba(15,23,42,0.08)]"
                       : "border border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900"

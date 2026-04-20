@@ -1,10 +1,7 @@
-import { motion, useReducedMotion } from "framer-motion";
 import Badge from "../ui/Badge";
 import Button from "../ui/Button";
 
 export default function ArticleHero({ categories }) {
-  const reduceMotion = useReducedMotion();
-
   return (
     <section className="surface-strong relative overflow-hidden px-6 py-7 sm:px-8 lg:px-10">
       <div className="pointer-events-none absolute inset-0">
@@ -12,22 +9,10 @@ export default function ArticleHero({ categories }) {
         <div className="absolute left-10 top-10 h-36 w-36 rounded-full bg-sky-100/40 blur-3xl" />
       </div>
 
-      <motion.div
-        initial={reduceMotion ? { opacity: 1 } : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="relative grid gap-8 xl:grid-cols-[minmax(0,1fr)_320px] xl:items-end"
-      >
+      <div className="relative grid gap-8 xl:grid-cols-[minmax(0,1fr)_320px] xl:items-end">
         <div className="max-w-3xl">
           <p className="eyebrow">Article Hub</p>
-          <motion.h1
-            initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-3 headline-lg"
-          >
-            沉浸式阅读技术实践、产品思考与社区经验
-          </motion.h1>
+          <h1 className="mt-3 headline-lg">沉浸式阅读技术实践、产品思考与校园经验</h1>
           <p className="mt-4 body-md">
             文章页强调阅读效率和信息组织，让标题、摘要、作者、标签与热度信息更清晰地服务内容浏览。
           </p>
@@ -55,7 +40,7 @@ export default function ArticleHero({ categories }) {
             </Button>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

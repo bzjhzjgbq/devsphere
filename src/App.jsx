@@ -6,13 +6,11 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
 import ArticlesPage from "./pages/ArticlesPage";
-import ArticleDetailPage from "./pages/ArticleDetailPage";
 import CompetitionsPage from "./pages/CompetitionsPage";
 import CompetitionDetailPage from "./pages/CompetitionDetailPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import PublishProjectPage from "./pages/PublishProjectPage";
-import PublishArticlePage from "./pages/PublishArticlePage";
 import ProfilePage from "./pages/ProfilePage";
 import FavoritesPage from "./pages/FavoritesPage";
 import FriendsPage from "./pages/FriendsPage";
@@ -69,22 +67,6 @@ export default function App() {
               element={
                 <ProtectedPage>
                   <ArticlesPage />
-                </ProtectedPage>
-              }
-            />
-            <Route
-              path="/articles/new"
-              element={
-                <ProtectedPage>
-                  <PublishArticlePage />
-                </ProtectedPage>
-              }
-            />
-            <Route
-              path="/articles/:articleId"
-              element={
-                <ProtectedPage>
-                  <ArticleDetailPage />
                 </ProtectedPage>
               }
             />

@@ -44,7 +44,7 @@ export default function MainLayout() {
                   isCompetitionPage ? "text-[#80938a]" : "text-slate-500"
                 }`}
               >
-                鍗椾含淇℃伅宸ョ▼澶у鏍″洯绀惧尯
+                南京信息工程大学校园社区
               </p>
             </div>
           </NavLink>

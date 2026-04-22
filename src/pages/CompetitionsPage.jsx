@@ -15,11 +15,11 @@ import {
 } from "../api/competitionApi";
 
 const defaultFilters = {
-  level: "鍏ㄩ儴",
-  category: "鍏ㄩ儴",
-  status: "鍏ㄩ儴",
-  audience: "鍏ㄩ儴",
-  source: "鍏ㄩ儴",
+  level: "全部",
+  category: "全部",
+  status: "全部",
+  audience: "全部",
+  source: "全部",
 };
 
 function sortByDeadline(items) {
@@ -71,15 +71,15 @@ export default function CompetitionsPage() {
             .includes(queryText);
 
         const matchesLevel =
-          filters.level === "鍏ㄩ儴" || competition.level === filters.level;
+          filters.level === "全部" || competition.level === filters.level;
         const matchesCategory =
-          filters.category === "鍏ㄩ儴" || competition.category === filters.category;
+          filters.category === "全部" || competition.category === filters.category;
         const matchesStatus =
-          filters.status === "鍏ㄩ儴" || competition.status === filters.status;
+          filters.status === "全部" || competition.status === filters.status;
         const matchesAudience =
-          filters.audience === "鍏ㄩ儴" || competition.audience === filters.audience;
+          filters.audience === "全部" || competition.audience === filters.audience;
         const matchesSource =
-          filters.source === "鍏ㄩ儴" || competition.sourceTags.includes(filters.source);
+          filters.source === "全部" || competition.sourceTags.includes(filters.source);
 
         return (
           matchesQuery &&
@@ -96,7 +96,7 @@ export default function CompetitionsPage() {
   const recentCompetitions = useMemo(() => {
     return sortByDeadline(
       catalog.filter((competition) =>
-        ["鎶ュ悕涓?, "鍗冲皢寮€濮?, "杩涜涓?].includes(competition.status),
+        ["报名中", "即将开始", "进行中"].includes(competition.status),
       ),
     ).slice(0, 6);
   }, [catalog]);
@@ -127,7 +127,7 @@ export default function CompetitionsPage() {
   }
 
   function getOptionCount(groupKey, option) {
-    if (option === "鍏ㄩ儴") {
+    if (option === "全部") {
       return catalog.length;
     }
 
@@ -164,7 +164,8 @@ export default function CompetitionsPage() {
             />
 
             <div className="border-b border-[#2b3531] py-4 text-sm text-[#93a59c]">
-              褰撳墠灞曠ず {filteredCompetitions.length} 椤圭珵璧涳紝鏀寔鎸夌骇鍒€佺被鍒€佺姸鎬併€侀潰鍚戝璞″拰鏉ユ簮绛涢€夈€?            </div>
+              当前展示 {filteredCompetitions.length} 项竞赛，支持按级别、类别、状态、面向对象和来源筛选。
+            </div>
 
             <div className="bg-[#181f1c]">
               <CompetitionList

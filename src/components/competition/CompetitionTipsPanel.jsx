@@ -2,7 +2,7 @@ export default function CompetitionTipsPanel({ tips }) {
   return (
     <section className="bg-[#212a26] px-4 py-5">
       <div className="border-b border-[#3d4b45] pb-3">
-        <p className="text-sm font-semibold text-[#ecf4ef]">鎺ㄨ崘鍏虫敞鏂瑰悜</p>
+        <p className="text-sm font-semibold text-[#ecf4ef]">推荐关注方向</p>
       </div>
 
       <div className="mt-4 space-y-3">
@@ -15,7 +15,8 @@ export default function CompetitionTipsPanel({ tips }) {
       </div>
 
       <p className="mt-4 border-t border-[#34413c] pt-4 text-xs leading-6 text-[#80938b]">
-        淇℃伅鏉ユ簮浠ユ暀鑲查儴璁ゅ彲绔炶禌鍚嶅崟鍜屽鏍?2026 骞寸珵璧涚洰褰曚负涓伙紝鍙﹁ˉ鍏呭皯閲忔帹鑽愯禌浜嬫柟渚跨瓫閫夈€?      </p>
+        信息来源以教育部认可竞赛名单和学校 2026 年竞赛目录为主，另补充少量推荐赛事方便筛选。
+      </p>
     </section>
   );
 }

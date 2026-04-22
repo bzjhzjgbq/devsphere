@@ -93,7 +93,7 @@ export default function LandingUserMenu({ user }) {
                 <p className="text-sm font-medium text-white">切换账号</p>
                 <p className="mt-1 text-xs text-slate-400">返回登录页，切换其他账号</p>
               </div>
-              <span className="text-slate-500">›</span>
+              <span className="text-slate-500">→</span>
             </button>
 
             <button
@@ -105,7 +105,7 @@ export default function LandingUserMenu({ user }) {
                 <p className="text-sm font-medium text-rose-300">退出登录</p>
                 <p className="mt-1 text-xs text-rose-200/70">清除登录态并返回登录页</p>
               </div>
-              <span className="text-rose-300">⎋</span>
+              <span className="text-rose-300">⟶</span>
             </button>
           </motion.div>
         ) : null}

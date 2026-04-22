@@ -1,8 +1,8 @@
 import { currentUserProfile } from "../data/mockUsers";
 
 function formatRole(roleCode) {
-  if (roleCode === "ADMIN") return "绠＄悊鍛?;
-  if (roleCode === "TEACHER") return "鏁欏笀";
+  if (roleCode === "ADMIN") return "管理员";
+  if (roleCode === "TEACHER") return "教师";
   return currentUserProfile.role;
 }
 

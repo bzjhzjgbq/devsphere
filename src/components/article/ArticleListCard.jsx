@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Badge from "../ui/Badge";
 
 export default function ArticleListCard({ article }) {
@@ -10,9 +11,11 @@ export default function ArticleListCard({ article }) {
         <span>{article.publishedAt}</span>
       </div>
 
-      <h3 className="mt-4 text-[24px] font-semibold tracking-[-0.04em] text-slate-950">
-        {article.title}
-      </h3>
+      <Link to={`/articles/${article.id}`} className="block">
+        <h3 className="mt-4 text-[24px] font-semibold tracking-[-0.04em] text-slate-950 transition duration-200 group-hover:text-emerald-700">
+          {article.title}
+        </h3>
+      </Link>
 
       <p className="mt-3 text-[15px] leading-7 text-slate-600">{article.excerpt}</p>
 

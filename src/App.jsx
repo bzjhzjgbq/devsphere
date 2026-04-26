@@ -6,6 +6,8 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
 import ArticlesPage from "./pages/ArticlesPage";
+import ArticleDetailPage from "./pages/ArticleDetailPage";
+import PublishArticlePage from "./pages/PublishArticlePage";
 import CompetitionsPage from "./pages/CompetitionsPage";
 import CompetitionDetailPage from "./pages/CompetitionDetailPage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -67,6 +69,22 @@ export default function App() {
               element={
                 <ProtectedPage>
                   <ArticlesPage />
+                </ProtectedPage>
+              }
+            />
+            <Route
+              path="/articles/:articleId"
+              element={
+                <ProtectedPage>
+                  <ArticleDetailPage />
+                </ProtectedPage>
+              }
+            />
+            <Route
+              path="/articles/new"
+              element={
+                <ProtectedPage>
+                  <PublishArticlePage />
                 </ProtectedPage>
               }
             />
